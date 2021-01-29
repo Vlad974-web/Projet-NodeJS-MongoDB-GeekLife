@@ -110,3 +110,104 @@ h3 {
 .fab {
     font-size: 30px;
 }
+
+
+/* Page Contact */
+.contact {
+    position: relative;
+    min-height: 85vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.774), rgba(22, 18, 18, 0.329)),url(../image/bg-contact.jpg);;
+    background-size: cover;
+    background-position: center;
+}
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+.container-contact {
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-top: 20px;
+}
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 22px;
+    margin-right: 30px;
+}
+.blog {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.text {
+    color: #3ada2f;
+    font-weight: 500;
+}
+.text p {
+    color: #fff;
+}
+.contact-form {
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    margin-right: 100px;
+}
+.contact-form h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contact-form .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contact-form .inputBox input,
+.contact-form .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contact-form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contact-form .inputBox input:focus ~ span,
+.contact-form .inputBox input:valid ~ span,
+.contact-form .inputBox textarea:focus ~ span,
+.contact-form .inputBox textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
