@@ -1,8 +1,12 @@
 const express = require('express')
 const exphbs  = require('express-handlebars')
+const mongoose = require('mongoose')
 
 
 const app = express()
+
+// Conection MongoDB
+mongoose.connect('mongodb://localhost27017/geeklife', {useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(express.static('public'))
 
