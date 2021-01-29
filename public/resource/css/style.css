@@ -80,7 +80,7 @@ p {
 /* Footer */
 .container-fluid {
     overflow: hidden;
-    margin-top: 250px;
+    /* margin-top: 250px; */
     background: #262626;
     color: #15709e !important;
     margin-bottom: 0;
@@ -115,7 +115,7 @@ h3 {
 /* Page Contact */
 .contact {
     position: relative;
-    min-height: 85vh;
+    min-height: 100vh;
     padding: 50px 100px;
     display: flex;
     justify-content: center;
@@ -139,7 +139,7 @@ h3 {
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .contact-info {
     display: flex;

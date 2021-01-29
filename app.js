@@ -4,6 +4,8 @@ const exphbs  = require('express-handlebars')
 
 const app = express()
 
+app.use(express.static('public'))
+
 
 // Handlebars ------------------------------------------------------
 app.engine('hbs', exphbs({defaultLayout: 'main', extname: 'hbs'}))
