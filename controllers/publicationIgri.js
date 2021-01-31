@@ -1,6 +1,12 @@
+const Igri = require('../models/Products')
+//const path = require('path')
+
 module.exports = (req, res) => {
 
-    console.log(req.body);
+    Igri.create(req.body, (err, post) => {
 
-    res.redirect('/')
+        res.redirect('/')
+
+    })
+    
 }

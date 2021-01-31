@@ -14,4 +14,4 @@ const igriShema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('product', igriShema)
+module.exports = mongoose.model('Products', igriShema)

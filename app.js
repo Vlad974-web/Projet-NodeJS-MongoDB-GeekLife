@@ -31,7 +31,7 @@ app.set('view engine', 'hbs');
 
 
 
-/*  ============================================ Controllers hbs ================================================== */
+/*  ============================================ Controllers hbs ================================================================ */
 
 // index.hbs --------------------------------------
 const homePage = require('./controllers/homePage')
@@ -41,6 +41,12 @@ const contactPageController = require('./controllers/contactPage')
 const addIgriController = require('./controllers/addIgri')
 // Post Publigation Igri
 const publicationIgri = require('./controllers/publicationIgri')
+
+
+
+
+
+
 
 
 /* ======================================================== Toutes les routes hbs ================================================= */
