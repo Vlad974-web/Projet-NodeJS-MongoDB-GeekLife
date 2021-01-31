@@ -1,0 +1,46 @@
+<section class="section">
+    <div class="container is-fullhd">
+        <form action="/publication/igri" method="POST">
+        <!--  dans action nous mettons l'url qui est dans le app.js methode post-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Le nom du jeu" name="title">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Catégorie</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Le genre du jeu" name="categorie">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Prix</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Le prix du jeu" name="prix">
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="description"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <input type="file" class="form-control-file mb-2" id="exampleFormControlFile1" name="image">
+        </div>
+        
+
+        <div class="mb-3">
+            <button class="btn btn-success">Valider</button>
+            <button class="btn btn-link">Annuler</button>
+        </div>
+    </form>
+    </div>
+</section>
