@@ -18,4 +18,17 @@ module.exports = (req, res) => {
                 res.redirect('/')
             })
     })
+
+    /* video.mv(uploadVideo, (err) => {
+
+        Igri.create(
+            {
+                ...req.body,
+                video: `/video/${video.name}`
+            }
+            , (err, post) => {
+    
+                res.redirect('/')
+            })
+    }) */
 }

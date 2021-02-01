@@ -34,6 +34,10 @@ app.engine('hbs', exphbs({defaultLayout: 'main', extname: 'hbs', handlebars: all
 app.set('view engine', 'hbs');
 
 
+/* Middleware */
+const articlePostMiddl = require('./middleware/articlePostMiddl')
+app.use('/publication/igri', articlePostMiddl)
+
 
 
 
