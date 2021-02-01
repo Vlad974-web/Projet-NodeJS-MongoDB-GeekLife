@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 const Handlebars = require("handlebars")
 const path = require('path')
+const fileupload = require('express-fileupload')
 
 
 
@@ -18,9 +19,14 @@ mongoose.connect('mongodb://localhost:27017/geeklife', {useNewUrlParser: true, u
     console.log("échec de la connexion à la base de données.");
 });
 
+/* ==================== BodyParser ==================== */
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, 'public')))
+
+
+/* Express-FileUpload */
+app.use(fileupload())
 
 
 // Handlebars ==========================================================================================================

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+//const nb = Math.round(nb*100)/100
 
 const igriShema = new mongoose.Schema({
 
@@ -8,10 +8,7 @@ const igriShema = new mongoose.Schema({
     prix: Number,
     image: String,
     description: String,
-    createDate: {
-        type: Date,
-        default: new Date()
-    }
+    date: String
 })
 
 module.exports = mongoose.model('Products', igriShema)
