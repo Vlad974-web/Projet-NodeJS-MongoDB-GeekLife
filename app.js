@@ -56,11 +56,6 @@ const descriptionIgri = require('./controllers/descriptionIgri')
 
 
 
-
-
-
-
-
 /* ======================================================== Toutes les routes hbs ================================================= */
 // Route index.hbs
 app.get('/', homePage)
@@ -71,6 +66,21 @@ app.get('/game/addIgri', addIgriController)
 app.post('/publication/igri', publicationIgri)
 // Route description.hbs
 app.get('/description/:id', descriptionIgri)
+
+
+
+
+
+/* ==================================================== User Controllers ========================================================= */
+const addUser = require('./controllers/addUser')
+
+
+
+/* ====================================================== Toutes les routes User ================================================= */
+app.get('/add/user', addUser)
+
+
+
 
 
 
