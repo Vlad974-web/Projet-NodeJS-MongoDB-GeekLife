@@ -41,6 +41,8 @@ const contactPageController = require('./controllers/contactPage')
 const addIgriController = require('./controllers/addIgri')
 // Post Publigation Igri
 const publicationIgri = require('./controllers/publicationIgri')
+// Description Of The Article
+const descriptionIgri = require('./controllers/descriptionIgri')
 
 
 
@@ -55,8 +57,10 @@ app.get('/', homePage)
 /* Route contact.hbs */
 app.get('/contact', contactPageController)
 /* Route addIgri.hbs */
-app.get('/addIgri', addIgriController)
+app.get('/game/addIgri', addIgriController)
 app.post('/publication/igri', publicationIgri)
+// Route description.hbs
+app.get('/description/:id', descriptionIgri)
 
 
 

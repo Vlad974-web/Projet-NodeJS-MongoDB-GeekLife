@@ -1,3 +1,3 @@
-module.exports = ('/contact', (req, res) => {
+module.exports = (req, res) => {
     res.render('contact')
-})
+}

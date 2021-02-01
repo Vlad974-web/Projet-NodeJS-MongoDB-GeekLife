@@ -1,3 +1,3 @@
 module.exports = (req, res) => {
-    res.render('addIgri')
+    res.render('game/addIgri')
 }
