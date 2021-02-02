@@ -73,11 +73,18 @@ app.get('/description/:id', descriptionIgri)
 
 /* ==================================================== User Controllers ========================================================= */
 const addUser = require('./controllers/addUser')
+const userRegister = require('./controllers/userRegister')
+const userLogin = require('./controllers/userLogin')
 
 
 
 /* ====================================================== Toutes les routes User ================================================= */
+// Route register.hbs -------------------
 app.get('/add/user', addUser)
+app.post('/user/register', userRegister)
+
+// Route login.hbs
+app.get('/user/login', userLogin)
 
 
 

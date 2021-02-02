@@ -2,69 +2,71 @@
     <div class="wrapper">
         <div class="title-register">S'inscrire</div>
         <div class="form-register">
+            <form action="/user/register" method="POST" enctype="multipart/form-data">
 
-            <div class="input_field">
-                <label>Prénom</label>
-                <input type="text" class="input-register">
-            </div>
-
-            <div class="input_field">
-                <label>Nom</label>
-                <input type="text" class="input-register">
-            </div>
-
-            <div class="input_field">
-                <label>Mot de passe</label>
-                <input type="password" class="input-register">
-            </div>
-
-            <div class="input_field">
-                <label>Confirmez le mot de passe</label>
-                <input type="password" class="input-register">
-            </div>
-
-            <div class="input_field">
-                <label>Le sexe</label>
-                <div class="custom_select">
-                    <select>
-                        <option value="">Sélectionner</option>
-                        <option value="male">Homme</option>
-                        <option value="female">Femme</option>
-                    </select>
+                <div class="input_field">
+                    <label>Prénom</label>
+                    <input type="text" class="input-register" placeholder="Votre prénom" name="name">
                 </div>
-            </div>
 
-            <div class="input_field">
-                <label>E-mail Adresse</label>
-                <input type="text" class="input-register">
-            </div>
+                <div class="input_field">
+                    <label>Nom</label>
+                    <input type="text" class="input-register" placeholder="Votre Nom de Famaille" name="firstName">
+                </div>
 
-            <div class="input_field">
-                <label>Numéro de téléphone</label>
-                <input type="text" class="input-register">
-            </div>
+                <div class="input_field">
+                    <label>Mot de passe</label>
+                    <input type="password" class="input-register" placeholder="Mot de passe" name="password">
+                </div>
 
-            <div class="input_field">
-                <label>Adresse</label>
-                <textarea name="" rows="2" class="texterea-register"></textarea>
-            </div>
+                <div class="input_field">
+                    <label>Confirmez le mot de passe</label>
+                    <input type="password" class="input-register" placeholder="Mot de passe" name="confirmPassword">
+                </div>
 
-            <div class="input_field">
-                <label>Code Postal</label>
-                <input type="text" class="input-register">
-            </div>
+                <div class="input_field">
+                    <label>Le sexe</label>
+                    <div class="custom_select">
+                        <select>
+                            <option value="">Sélectionner</option>
+                            <option value="male">Homme</option>
+                            <option value="female">Femme</option>
+                        </select>
+                    </div>
+                </div>
 
-            <div class="input_field terms">
-                <label class="check-register">
-                    <input type="checkbox">
-                    <span class="checkmat"></span>
-                </label>
-                <p>Accepté des termes et conditions</p>
-            </div>
+                <div class="input_field">
+                    <label>E-mail Adresse</label>
+                    <input type="text" class="input-register" placeholder="Votre e-mail" name="email">
+                </div>
 
-            <div class="inputfield">
-                <input type="submit" value="Enregistrer" class="btn-register">
-            </div>
+                <div class="input_field">
+                    <label>Numéro de téléphone</label>
+                    <input type="text" class="input-register" placeholder="Votre numéro" name="phone">
+                </div>
+
+                <div class="input_field">
+                    <label>Adresse</label>
+                    <textarea name="adress" rows="2" class="texterea-register"></textarea>
+                </div>
+
+                <div class="input_field">
+                    <label>Code Postal</label>
+                    <input type="text" class="input-register" placeholder="Votre Code Postal" name="postal">
+                </div>
+
+                <div class="input_field terms">
+                    <label class="check-register">
+                        <input type="checkbox">
+                        <span class="checkmat"></span>
+                    </label>
+                    <p>Accepté des termes et conditions</p>
+                </div>
+
+                <div class="inputfield">
+                    <input type="submit" value="Enregistrer" class="btn-register">
+                </div>
+            </form>
         </div>
     </div>
 </section>
