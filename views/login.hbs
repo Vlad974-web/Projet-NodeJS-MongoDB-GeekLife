@@ -1,20 +1,22 @@
 <section class="login-page">
     <div class="center">
         <h1>Se connecter</h1>
-        <form action="/user/login" method="POST">
+        <form action="/user/loginAuth" method="POST">
 
             <div class="txt_field">
-                <input type="text" required>
+                <input type="text" name="email" required>
                 <label>E-mail</label>
             </div>
 
             <div class="txt_field">
-                <input type="password" required>
+                <input type="password" name="password" required>
                 <label>Mot de passe</label>
             </div>
 
             <div class="pass">Mot de passe, oublié?</div>
-            <input type="submit" value="Entrer">
+                <div class="inputfield">
+                    <input type="submit" value="Connecter" class="btn-register">
+                </div>
 
             <div class="signup_link">
                 Vous n'est pas encore inscrire?<a href="">S'inscrire</a>

@@ -75,6 +75,7 @@ app.get('/description/:id', descriptionIgri)
 const addUser = require('./controllers/addUser')
 const userRegister = require('./controllers/userRegister')
 const userLogin = require('./controllers/userLogin')
+const userLoginAuth = require('./controllers/userLoginAuth')
 
 
 
@@ -85,6 +86,7 @@ app.post('/user/register', userRegister)
 
 // Route login.hbs
 app.get('/user/login', userLogin)
+app.post('/user/loginAuth', userLoginAuth)
 
 
 
