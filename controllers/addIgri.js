@@ -1,3 +1,9 @@
 module.exports = (req, res) => {
-    res.render('game/addIgri')
+
+    if (req.session.userId) {
+        
+        return res.render('game/addIgri')
+    }
+
+    res.redirect('/user/login')
 }

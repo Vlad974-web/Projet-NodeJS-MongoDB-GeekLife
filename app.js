@@ -5,6 +5,8 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 const Handlebars = require("handlebars")
 const path = require('path')
 const fileupload = require('express-fileupload')
+const expressSession = require('express-session')
+const MongoStore = require('connect-mongo')
 
 
 
@@ -34,9 +36,26 @@ app.engine('hbs', exphbs({defaultLayout: 'main', extname: 'hbs', handlebars: all
 app.set('view engine', 'hbs');
 
 
-/* Middleware */
+/* ========================= Middleware ========================= */
 const articlePostMiddl = require('./middleware/articlePostMiddl')
 app.use('/publication/igri', articlePostMiddl)
+
+const connexion = require('./middleware/connexion')
+//app.use('/game/addIgri', connexion)
+
+
+/* ========== Express-Session et Connect-Mongo ========== */
+const mongoStore = MongoStore(expressSession)
+
+app.use(expressSession({
+    secret: 'Securité',
+    name: 'boobs',
+    saveUninitialized: true,
+    resave: false,
+    store: new mongoStore(
+        {mongooseConnection: mongoose.connection}
+    )
+}))
 
 
 
@@ -53,17 +72,14 @@ const addIgriController = require('./controllers/addIgri')
 const publicationIgri = require('./controllers/publicationIgri')
 // Description Of The Article
 const descriptionIgri = require('./controllers/descriptionIgri')
-
-
-
 /* ======================================================== Toutes les routes hbs ================================================= */
 // Route index.hbs
 app.get('/', homePage)
 /* Route contact.hbs */
 app.get('/contact', contactPageController)
 /* Route addIgri.hbs */
-app.get('/game/addIgri', addIgriController)
-app.post('/publication/igri', publicationIgri)
+app.get('/game/addIgri', connexion, addIgriController)
+app.post('/publication/igri', connexion, articlePostMiddl, publicationIgri)
 // Route description.hbs
 app.get('/description/:id', descriptionIgri)
 
@@ -76,9 +92,6 @@ const addUser = require('./controllers/addUser')
 const userRegister = require('./controllers/userRegister')
 const userLogin = require('./controllers/userLogin')
 const userLoginAuth = require('./controllers/userLoginAuth')
-
-
-
 /* ====================================================== Toutes les routes User ================================================= */
 // Route register.hbs -------------------
 app.get('/add/user', addUser)

@@ -12,6 +12,9 @@ module.exports = (req, res) => {
 
                 if (code) {
 
+                    req.session.userId = user._id
+                    
+
                     res.redirect('/')
                 } else {
                     
