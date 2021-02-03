@@ -6,35 +6,35 @@ const userShema = new mongoose.Schema({
 
     name: {
         type: String,
-        required: [true, 'Le prénom est oblgatoire']
+        required: true
     },
     firstName: {
         type: String,
-        required: [true, 'Le nom est oblgatoire']
+        required: true
     },
     password: {
         type: String,
-        required: [true, 'Le mot de passe est oblgatoire'],
+        required: true,
         unique: true
     },
     confirmPassword: {
         type: String,
-        required: [true, 'Le mot de passe est oblgatoire'],
+        required: true,
         unique: true
     },
     email: {
         type: String,
-        required: [true, 'Le e-mail est oblgatoire'],
+        required: true,
         unique: true
     },
     phone: Number,
     adress: {
         type: String,
-        required: [true, "L'adresse est oblgatoire"]
+        required: true
     },
     postal: {
         type: String,
-        required: [true, 'Le code postal est oblgatoire']
+        required: true
     }
 })
 

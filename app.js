@@ -7,7 +7,7 @@ const path = require('path')
 const fileupload = require('express-fileupload')
 const expressSession = require('express-session')
 const MongoStore = require('connect-mongo')
-
+const flash = require('connect-flash')
 
 
 
@@ -56,6 +56,12 @@ app.use(expressSession({
         {mongooseConnection: mongoose.connection}
     )
 }))
+
+
+/* ========== Connect-Flash ========== */
+app.use(flash())
+
+
 
 
 
